@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Improvement Coach</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .goal-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .feedback {
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Self-Improvement Coach</h1>
+        <input type="text" class="goal-input" placeholder="Enter your goal here..." id="goalInput">
+        <button class="button" onclick="saveGoal()">Save Goal</button>
+        <div id="feedback" class="feedback"></div>
+    </div>
+
+    <script>
+        function saveGoal() {
+            let goal = document.getElementById("goalInput").value;
+            if (goal) {
+                document.getElementById("feedback").innerHTML = "Great! Your goal is: <strong>" + goal + "</strong>";
+                document.getElementById("goalInput").value = "";  // Clear input field after saving
+            } else {
+                document.getElementById("feedback").innerHTML = "Please enter a valid goal.";
+            }
+        }
+    </script>
+</body>
+</html>
