@@ -1,0 +1,9 @@
+function saveGoal() {
+    let goal = document.getElementById("goalInput").value;
+    if (goal) {
+        document.getElementById("feedback").innerHTML = "Great! Your goal is: <strong>" + goal + "</strong>";
+        document.getElementById("goalInput").value = "";  // Clear input field after saving
+    } else {
+        document.getElementById("feedback").innerHTML = "Please enter a valid goal.";
+    }
+}
